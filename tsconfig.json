@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,8 +18,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
+      "@templates/*": ["src/templates/*"],
       "@components/*":["src/components/*"],
       "@hooks/*":["src/hooks/*"],
       "@pages/*":["pages/*"],
