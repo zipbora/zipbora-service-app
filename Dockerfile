@@ -1,7 +1,7 @@
 FROM node:16-alpine
 
 # Set working directory
-WORKDIR /usr/app
+WORKDIR /usr/zipbora-service-app
 
 # Install yarn
 RUN apk add yarn
@@ -27,4 +27,4 @@ EXPOSE 3000
 USER node
 
 # Launch app with PM2
-CMD [ "pm2", "start", "yarn", "--name", "zipbora-service-app", "--", "dev" ]
+CMD [ "pm2-runtime", "start", "yarn", "--name", "zipbora-service-app", "--", "dev" ]
