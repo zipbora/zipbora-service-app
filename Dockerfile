@@ -27,4 +27,4 @@ EXPOSE 3000
 USER node
 
 # Launch app with PM2
-CMD [ "pm2-runtime", "start", "yarn", "--name", "zipbora-service-app", "--", "dev" ]
+CMD [ "pm2-runtime", "start", "yarn", "--name", "zipbora-service-app", "dev" ]
