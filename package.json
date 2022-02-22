@@ -5,11 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p 8080",
+    "start": "next start -p 3000",
     "test": "jest",
     "lint": "next lint",
-    "type-check": "tsc",
-    "build-storybook": "build-storybook"
+    "type-check": "tsc"
   },
   "dependencies": {
     "@emotion/react": "^11.7.1",

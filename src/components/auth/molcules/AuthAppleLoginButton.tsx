@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import Button from "@mui/material/Button";
 import { css } from "@emotion/react";
 
 const styles = {
@@ -15,7 +15,17 @@ const styles = {
 const AuthKakaoLoginButton = () => {
   return (
     <>
-      <Button sx={styles.button} variant="contained">
+      <Button
+        css={css`
+          width: 100%;
+          color: #000000;
+          background-color: #ededed;
+          &:hover {
+            background-color: #d9d9d9;
+          }
+        `}
+        variant="contained"
+      >
         애플 로그인 하기
       </Button>
     </>
