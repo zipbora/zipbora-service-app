@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import Link from "next/link";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
@@ -26,7 +27,7 @@ const FilterMenu: React.FC = () => {
 
   return (
     <>
-      <Stack direction="row" spacing={1} sx={styles.chipList}>
+      <Stack direction="row" spacing={1} css={styles.chipList}>
         <Chip
           label="매매"
           sx={styles.chip}
