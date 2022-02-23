@@ -12,9 +12,9 @@ const ServiceLayout: React.FC = observer(({ children }) => {
 
   return (
     <div>
-      <button type="button" onClick={handleTestStore}>
-        {/* {serviceDomainStore.number} */}
-      </button>
+      {/* <button type="button" onClick={handleTestStore}>
+        {serviceDomainStore.number}
+      </button> */}
       <ServiceGNB />
       {children}
     </div>
