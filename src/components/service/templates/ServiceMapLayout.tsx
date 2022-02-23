@@ -49,15 +49,15 @@ const ServiceMapLayout: React.FC = () => {
     // set bounds_changed listener
     const getBounds = debounce(bounds => {
       setZoom(map.getZoom());
-      setXNECoord(map.getBounds().getNE().x);
-      setYNECoord(map.getBounds().getNE().y);
-      setXSWCoord(map.getBounds().getSW().x);
-      setYSWCoord(map.getBounds().getSW().y);
+      setXNECoord((map.getBounds() as any).getNE().x);
+      setYNECoord((map.getBounds() as any).getNE().y);
+      setXSWCoord((map.getBounds() as any).getSW().x);
+      setYSWCoord((map.getBounds() as any).getSW().y);
       console.log(
-        `NE x좌표: ${map.getBounds().getNE().x} NE y좌표: ${
-          map.getBounds().getNE().y
-        } SW x좌표: ${map.getBounds().getSW().x} SW y좌표: ${
-          map.getBounds().getSW().y
+        `NE x좌표: ${(map.getBounds() as any).getNE().x} NE y좌표: ${
+          (map.getBounds() as any).getNE().y
+        } SW x좌표: ${(map.getBounds() as any).getSW().x} SW y좌표: ${
+          (map.getBounds() as any).getSW().y
         } zoom: ${map.getZoom()}`,
       );
     }, 400);
