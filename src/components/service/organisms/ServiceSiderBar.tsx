@@ -1,7 +1,8 @@
+/** @jsxImportSource @emotion/react */
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
-import Divider from '@mui/material/Divider';
+import Divider from "@mui/material/Divider";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import { jsx, css } from "@emotion/react";
@@ -9,12 +10,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import SideMenuList from "../molcules/SideMenuList";
 import UserProfile from "../molcules/UserProfile";
 
-const SiderBar: React.FC = ({
-  onClose = () => {
-    console.log("closed");
-  },
-  visible: boolean,
-}) => {
+interface Props {
+  onClose?: VoidFunction;
+  visible?: boolean;
+}
+
+const SiderBar: React.FC<Props> = ({ onClose, visible }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   const styles = {
@@ -34,17 +35,19 @@ const SiderBar: React.FC = ({
     `,
   };
 
-  const toggleDrawer = open => event => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event &&
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
 
-    setDrawerVisible(open);
-  };
+      setDrawerVisible(open);
+    };
 
   return (
     <>
@@ -54,14 +57,14 @@ const SiderBar: React.FC = ({
         open={drawerVisible}
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
-        sx={styles.drawer}
+        css={styles.drawer}
       >
         <div style={{ display: "flex", margin: "1rem" }}>
-          <CloseIcon sx={styles.closeIcon} onClick={toggleDrawer(false)} />
+          <CloseIcon css={styles.closeIcon} onClick={toggleDrawer(false)} />
         </div>
-        <UserProfile/>
-        <Divider/>
-        <SideMenuList/>
+        <UserProfile />
+        <Divider />
+        <SideMenuList />
       </SwipeableDrawer>
     </>
   );

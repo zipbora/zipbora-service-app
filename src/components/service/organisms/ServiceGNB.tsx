@@ -1,3 +1,4 @@
+/** @jsxImportSource @emotion/react */
 import Link from "next/link";
 import { styled } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -23,12 +24,12 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 const ServiceGNB: React.FC = () => {
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: "#5C9BFC" }}>
+      <AppBar position="static" css={{ backgroundColor: "#5C9BFC" }}>
         <Toolbar>
           <Typography
             variant="h6"
             component="div"
-            sx={{
+            css={{
               flexGrow: 1,
               textAlign: "center",
               display: "flex",
