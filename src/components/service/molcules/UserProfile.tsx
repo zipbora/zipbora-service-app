@@ -1,4 +1,5 @@
-import { jsx, css } from "@emotion/react";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -24,7 +25,7 @@ const UserProfile: React.FC = () => {
     <div>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: "#5693EF" }} aria-label="profile">
+          <Avatar css={{ bgcolor: "#5693EF" }} aria-label="profile">
             Z
           </Avatar>
         }

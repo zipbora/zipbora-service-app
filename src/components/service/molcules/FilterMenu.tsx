@@ -30,49 +30,49 @@ const FilterMenu: React.FC = () => {
       <Stack direction="row" spacing={1} css={styles.chipList}>
         <Chip
           label="매매"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="유형"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="평형"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="Clickable"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="Clickable"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="세대수"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="입주년차"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />
         <Chip
           label="용적률"
-          sx={styles.chip}
+          css={styles.chip}
           variant="outlined"
           onClick={handleClick}
         />

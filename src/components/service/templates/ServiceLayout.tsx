@@ -4,16 +4,16 @@ import { useStores } from "@stores/index";
 import { useEffect, useRef, useState } from "react";
 
 const ServiceLayout: React.FC = observer(({ children }) => {
-  const { serviceDomainStore } = useStores();
+  // const { serviceDomainStore } = useStores();
 
-  const handleTestStore: React.EventHandler = async e => {
-    serviceDomainStore.increase();
-  };
+  // const handleTestStore: React.EventHandler = async e => {
+  //   serviceDomainStore.increase();
+  // };
 
   return (
     <div>
       <button type="button" onClick={handleTestStore}>
-        {serviceDomainStore.number}
+        {/* {serviceDomainStore.number} */}
       </button>
       <ServiceGNB />
       {children}
