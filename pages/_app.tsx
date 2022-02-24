@@ -8,7 +8,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const currentDevice = useMobileDetect();
-  console.log("isMobile: ", currentDevice.isMobile());
   return (
     <>
       <StoresProvider>
