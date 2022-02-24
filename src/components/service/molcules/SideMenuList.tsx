@@ -1,11 +1,15 @@
-import React from "react";
-import { Clay } from "../../../assets/Icons";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import SideMenuItem from "./SideMenuItem";
 
 const SideMenuList: React.FC = () => {
   return (
-    <div>
-      SideMenuList
-      <Clay />
+    <div
+      css={css`
+        margin: 1.25rem;
+      `}
+    >
+      <SideMenuItem />
     </div>
   );
 };
