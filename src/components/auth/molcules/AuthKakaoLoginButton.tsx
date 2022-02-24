@@ -1,5 +1,8 @@
-import Button, { ButtonProps } from "@mui/material/Button";
+/**
+ * @jsxImportSource @emotion/react
+ * */
 
+import Button, { ButtonProps } from "@mui/material/Button";
 import { css } from "@emotion/react";
 
 const styles = {
@@ -16,7 +19,7 @@ const styles = {
 const AuthKakaoLoginButton = () => {
   return (
     <>
-      <Button sx={styles.button} variant="contained">
+      <Button css={styles.button} variant="contained">
         카카오톡 로그인 하기
       </Button>
     </>

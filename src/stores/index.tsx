@@ -1,16 +1,5 @@
 import React, { useContext } from "react";
-import ServiceDomainStore from "./ServiceDomainStore";
-import ServiceUiStore from "./ServiceUiStore";
-
-class RootStore {
-  serviceDomainStore;
-  serviceUiStore;
-
-  constructor() {
-    this.serviceDomainStore = new ServiceDomainStore(this);
-    this.serviceUiStore = new ServiceUiStore(this);
-  }
-}
+import RootStore from "./RootStore";
 
 const StoresContext = React.createContext({});
 

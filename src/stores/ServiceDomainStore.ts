@@ -1,13 +1,11 @@
 import { action, computed, makeObservable, observable } from "mobx";
 import ServiceRepository from "src/stores/repositories/ServiceRepository";
-/**
- * This store is for data fetch
- */
+
 class ServiceDomainStore {
-  private rootStore;
+  private rootStore: { rootStore: ServiceDomainStore };
   number = 0;
 
-  constructor(rootStore) {
+  constructor(rootStore: { rootStore: ServiceDomainStore }) {
     this.rootStore = rootStore;
     makeObservable(this, {
       number: observable, // 4버전의 @observable와 동일합니다.

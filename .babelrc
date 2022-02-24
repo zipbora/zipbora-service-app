@@ -6,6 +6,8 @@
         "autoLabel": "dev-only", // 기본값 'dev-only'
         "labelFormat": "mj-[dirname]-[filename]-[local]"
       }
-    ]
+    ],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": false }]
   ]
 }
