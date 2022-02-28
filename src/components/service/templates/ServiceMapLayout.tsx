@@ -13,7 +13,10 @@ const ServiceMapLayout: React.FC = () => {
 
   const mapStyle = {
     width: "100%",
-    height: "700px",
+    height: "calc(100%)",
+    position: "absolute",
+    zIndex: -1,
+    top: 0,
   };
 
   const initMap = () => {
@@ -33,11 +36,6 @@ const ServiceMapLayout: React.FC = () => {
     // create map
     const map = new naver.maps.Map("map", {
       center: locPosition,
-      zoomControl: true,
-      zoomControlOptions: {
-        style: naver.maps.ZoomControlStyle.SMALL,
-        position: naver.maps.Position.TOP_RIGHT,
-      },
       zoom: 15,
     });
 

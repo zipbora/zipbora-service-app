@@ -5,7 +5,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
-
+import { css } from "@emotion/react";
 import { MainLogo } from "../../../assets/Icons";
 import SiderBar from "./ServiceSiderBar";
 import FilterMenu from "../molcules/FilterMenu";
@@ -20,10 +20,20 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   },
 }));
 
-const ServiceGNB: React.FC = () => {
+const ServiceMainGNB: React.FC = () => {
+  const styles = {
+    appbarStyle: css`
+      background-color: #6d6af4;
+      height: 3.25rem;
+      .MuiToolbar-gutters {
+        min-height: 3.25rem;
+      }
+    `,
+  };
+
   return (
     <>
-      <AppBar position="static" css={{ backgroundColor: "#5C9BFC" }}>
+      <AppBar position="static" css={styles.appbarStyle}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -36,13 +46,13 @@ const ServiceGNB: React.FC = () => {
               aligIitems: "center",
             }}
           >
-            <MainLogo />
+            집보라
           </Typography>
           <SearchIcon />
           <SiderBar />
         </Toolbar>
+        <FilterMenu />
       </AppBar>
-      <FilterMenu />
       {/* <Menu
         mode="horizontal"
         style={{ background: ThemeStore.theme.mainColor }}
@@ -71,4 +81,4 @@ const ServiceGNB: React.FC = () => {
   );
 };
 
-export default ServiceGNB;
+export default ServiceMainGNB;

@@ -33,7 +33,12 @@ const SideMenuItem: React.FC = () => {
     },
     {
       icon: (
-        <PersonIcon width="1.25rem" height="1.25rem" viewBox="0 0 350 350" />
+        <PersonIcon
+          width="1.25rem"
+          height="1.25rem"
+          viewBox="0 0 350 350"
+          fill="#7000FF"
+        />
       ),
       name: "고객센터",
       onClick: () => console.log("고객센터"),
@@ -52,6 +57,7 @@ const SideMenuItem: React.FC = () => {
         <div
           css={css`
             height: 2.5rem;
+            display: flex;
             &:hover {
               cursor: pointer;
             }
