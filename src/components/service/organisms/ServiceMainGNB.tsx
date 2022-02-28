@@ -34,22 +34,42 @@ const ServiceMainGNB: React.FC = () => {
   return (
     <>
       <AppBar position="static" css={styles.appbarStyle}>
-        <Toolbar>
+        <Toolbar
+          css={css`
+            position: relative;
+            padding: 0;
+          `}
+        >
           <Typography
             variant="h6"
             component="div"
-            css={{
-              flexGrow: 1,
-              textAlign: "center",
-              display: "flex",
-              justifyContent: "center",
-              aligIitems: "center",
-            }}
+            css={css`
+              flex-grow: 1;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: absolute;
+              width: 100%;
+            `}
           >
             집보라
           </Typography>
-          <SearchIcon />
-          <SiderBar />
+          <div
+            css={css`
+              position: absolute;
+              right: 0;
+              display: flex;
+              margin-right: 1rem;
+            `}
+          >
+            <SearchIcon
+              css={css`
+                width: 2rem;
+              `}
+            />
+            <SiderBar />
+          </div>
         </Toolbar>
         <FilterMenu />
       </AppBar>

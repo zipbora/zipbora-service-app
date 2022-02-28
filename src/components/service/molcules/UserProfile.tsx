@@ -25,7 +25,12 @@ const UserProfile: React.FC = () => {
     <div>
       <CardHeader
         avatar={
-          <Avatar css={{ bgcolor: "#5693EF" }} aria-label="profile">
+          <Avatar
+            css={css`
+              background-color: #6b56ef;
+            `}
+            aria-label="profile"
+          >
             Z
           </Avatar>
         }

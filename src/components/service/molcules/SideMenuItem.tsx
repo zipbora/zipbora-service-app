@@ -8,6 +8,7 @@ import PersonIcon from "../../../assets/boy.svg";
 import SettingIcon from "../../../assets/setting.svg";
 
 const SideMenuItem: React.FC = () => {
+  const styles = {};
   const menuList = [
     {
       icon: <ChatIcon width="1.25rem" height="1.25rem" viewBox="0 0 350 350" />,
