@@ -62,6 +62,10 @@ const SideMenuItem: React.FC = () => {
             &:hover {
               cursor: pointer;
             }
+            svg {
+              filter: invert(10%) sepia(1%) saturate(3000%) hue-rotate(240deg)
+                brightness(100%) contrast(100%);
+            }
           `}
           onClick={menu.onClick}
         >

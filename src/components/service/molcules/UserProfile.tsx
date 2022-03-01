@@ -24,6 +24,12 @@ const UserProfile: React.FC = () => {
   return (
     <div>
       <CardHeader
+        css={css`
+          span {
+            font-weight: bold;
+            font-size: 1rem;
+          }
+        `}
         avatar={
           <Avatar
             css={css`

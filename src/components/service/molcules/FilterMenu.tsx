@@ -11,9 +11,9 @@ import { throttle } from "lodash";
 const FilterMenu: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const chipWrapperRef = useRef(null);
-  const chipScrollStartRef = useRef(null);
-  const chipScrollEndRef = useRef(null);
+  const chipWrapperRef = useRef<any>(null);
+  const chipScrollStartRef = useRef<any>(null);
+  const chipScrollEndRef = useRef<any>(null);
 
   const toggleExpand = useCallback(() => {
     if (isExpanded) {
@@ -25,16 +25,13 @@ const FilterMenu: React.FC = () => {
     }
     setIsExpanded(!isExpanded);
   }, [isExpanded]);
-
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log("radio checked", e.target.value);
-  };
   const handleClick = () => {
     console.info("You clicked the Chip.");
   };
   const handleScroll = throttle(() => {
     if (!chipWrapperRef?.current) return;
     const { offsetWidth, scrollLeft, scrollWidth } = chipWrapperRef.current;
+
     if (offsetWidth + scrollLeft >= scrollWidth) {
       console.log("end");
       chipScrollEndRef.current.style.display = "none";
@@ -46,6 +43,9 @@ const FilterMenu: React.FC = () => {
       chipScrollEndRef.current.style.display = "inline";
     }
   }, 200);
+  // const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   console.log("radio checked", e.target.value);
+  // };
 
   const styles = {
     wrapper: css`
@@ -69,6 +69,11 @@ const FilterMenu: React.FC = () => {
       border-radius: 6px;
       margin-right: 0.25rem;
       margin-bottom: 0.25rem;
+      &:hover {
+        border: 1px solid #6d6af4;
+        color: #6d6af4;
+        background-color: transparent;
+      }
     `,
     chipTotalWrapper: ({ isExpanded }) => css`
       width: ${isExpanded ? "100%" : "calc(100% - 3rem)"};
@@ -83,6 +88,7 @@ const FilterMenu: React.FC = () => {
         z-index: 2;
       }
       .gradient-left {
+        display: none;
         background: linear-gradient(
           90deg,
           #ffffff 20%,
