@@ -30,7 +30,7 @@ const SiderBar: React.FC<Props> = ({ onClose, visible }) => {
       !display: flex;
     `,
     closeIcon: css`
-      color: #5693ef;
+      color: #6d6af4;
       margin-left: auto;
     `,
   };
@@ -51,7 +51,12 @@ const SiderBar: React.FC<Props> = ({ onClose, visible }) => {
 
   return (
     <>
-      <MenuIcon onClick={toggleDrawer(true)} />
+      <MenuIcon
+        onClick={toggleDrawer(true)}
+        css={css`
+          width: 2rem;
+        `}
+      />
       <SwipeableDrawer
         anchor="right"
         open={drawerVisible}
