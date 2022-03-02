@@ -15,8 +15,8 @@ const ServiceMapLayout: React.FC = () => {
     width: "100%",
     height: "calc(100%)",
     position: "absolute",
-    zIndex: -1,
-    top: 0,
+    zIndex: "-1",
+    top: "0",
   };
 
   const initMap = () => {

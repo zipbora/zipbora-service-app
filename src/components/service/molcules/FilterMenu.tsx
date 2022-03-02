@@ -47,6 +47,10 @@ const FilterMenu: React.FC = () => {
   //   console.log("radio checked", e.target.value);
   // };
 
+  type DrawerTypeProps = {
+    isExpanded: boolean;
+  };
+
   const styles = {
     wrapper: css`
       width: 100%;
@@ -77,8 +81,8 @@ const FilterMenu: React.FC = () => {
         background-color: transparent;
       }
     `,
-    chipTotalWrapper: ({ isExpanded }) => css`
-      width: ${isExpanded ? "100%" : "calc(100% - 3rem)"};
+    chipTotalWrapper: (props: DrawerTypeProps) => css`
+      width: ${props.isExpanded ? "100%" : "calc(100% - 3rem)"};
       position: relative;
       background-color: white;
       .gradient-left,
@@ -107,13 +111,13 @@ const FilterMenu: React.FC = () => {
         );
       }
     `,
-    chipListWrapper: ({ isExpanded }) => css`
+    chipListWrapper: (props: DrawerTypeProps) => css`
       display: flex;
       overflow: auto;
       align-items: center;
       position: relative;
       margin: 0.5rem 0 0.25rem 1rem;
-      ${isExpanded === true &&
+      ${props.isExpanded === true &&
       `
         flex-direction: row;
         flex-wrap: wrap;
@@ -124,7 +128,7 @@ const FilterMenu: React.FC = () => {
         display: none; /* Chrome, Safari, Opera*/
       }
     `,
-    expandBtn: ({ isExpanded }) => css`
+    expandBtn: (props: DrawerTypeProps) => css`
       width: 2.5rem;
       display: flex;
       align-items: center;
@@ -133,7 +137,7 @@ const FilterMenu: React.FC = () => {
       color: black;
       margin: 0.5rem 0.25rem;
       border-left: 1px solid #dcdcdc;
-      ${isExpanded === true &&
+      ${props.isExpanded === true &&
       `
         display: none;
       `}
