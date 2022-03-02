@@ -21,13 +21,7 @@ const Puller = styled(Box)(({}) => ({
 }));
 
 const ServiceLayout: React.FC = observer(({ children }) => {
-<<<<<<< HEAD
   // const { serviceStore } = useStores();
-=======
-  const [drawerVisible, setDrawerVisible] = useState(false);
-
-  // const { serviceDomainStore } = useStores();
->>>>>>> 4c0cf9366d76e2963a101f320b9dc248cd89e58b
 
   // const handleTestStore: React.EventHandler = async e => {
   //   serviceStore.increase();
