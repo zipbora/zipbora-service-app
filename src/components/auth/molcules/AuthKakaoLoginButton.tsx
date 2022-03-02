@@ -2,7 +2,7 @@
  * @jsxImportSource @emotion/react
  * */
 
-import Button, { ButtonProps } from "@mui/material/Button";
+import Button from "@mui/material/Button";
 import { css } from "@emotion/react";
 
 const styles = {
