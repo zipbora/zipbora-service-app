@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { debounce } from "lodash";
+import Script from "next/script";
 
 const ServiceMapLayout: React.FC = () => {
   const [xNECoord, setXNECoord] = useState<number>(0);
@@ -67,6 +68,11 @@ const ServiceMapLayout: React.FC = () => {
   }, []);
   return (
     <>
+      <Script
+        type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=u27hpbj3bf"
+        strategy="beforeInteractive"
+      />
       <div id="map" style={mapStyle} />
     </>
   );
