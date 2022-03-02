@@ -1,12 +1,12 @@
-import ServiceDomainStore from "./ServiceDomainStore";
+import ServiceStore from "./ServiceStore";
 import ServiceUiStore from "./ServiceUiStore";
 
 export default class RootStore {
-  public serviceDomainStore: ServiceDomainStore;
+  public serviceStore: ServiceStore;
   public serviceUiStore: ServiceUiStore;
 
   constructor() {
-    this.serviceDomainStore = new ServiceDomainStore(this);
+    this.serviceStore = new ServiceStore(this);
     this.serviceUiStore = new ServiceUiStore(this);
   }
 }

@@ -3,11 +3,11 @@ import { makeObservable, observable } from "mobx";
  * This store is for global ui state
  */
 class ServiceUiStore {
-  private rootStore: { rootStore: ServiceUiStore };
+  private rootStore: { serviceUiStore: ServiceUiStore };
 
   language = "en_US";
 
-  constructor(rootStore: { rootStore: ServiceUiStore }) {
+  constructor(rootStore: { serviceUiStore: ServiceUiStore }) {
     this.rootStore = rootStore;
     makeObservable(this, {
       language: observable,

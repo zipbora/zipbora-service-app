@@ -4,10 +4,10 @@ import { useStores } from "@stores/index";
 import { useEffect, useRef, useState } from "react";
 
 const ServiceLayout: React.FC = observer(({ children }) => {
-  // const { serviceDomainStore } = useStores();
+  // const { serviceStore } = useStores();
 
   // const handleTestStore: React.EventHandler = async e => {
-  //   serviceDomainStore.increase();
+  //   serviceStore.increase();
   // };
 
   return (
