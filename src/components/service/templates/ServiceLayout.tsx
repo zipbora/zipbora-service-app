@@ -21,12 +21,10 @@ const Puller = styled(Box)(({}) => ({
 }));
 
 const ServiceLayout: React.FC = observer(({ children }) => {
-  const [drawerVisible, setDrawerVisible] = useState(false);
-
-  // const { serviceDomainStore } = useStores();
+  // const { serviceStore } = useStores();
 
   // const handleTestStore: React.EventHandler = async e => {
-  //   serviceDomainStore.increase();
+  //   serviceStore.increase();
   // };
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
