@@ -69,6 +69,8 @@ const FilterMenu: React.FC = () => {
       border-radius: 6px;
       margin-right: 0.25rem;
       margin-bottom: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
       &:hover {
         border: 1px solid #6d6af4;
         color: #6d6af4;

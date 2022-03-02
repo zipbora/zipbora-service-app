@@ -51,6 +51,7 @@ const ServiceMainGNB: React.FC = () => {
               align-items: center;
               position: absolute;
               width: 100%;
+              font-weight: 700;
             `}
           >
             집보라
