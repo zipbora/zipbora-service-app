@@ -15,6 +15,9 @@ const styles = {
     }
   `,
 };
+const handleClickButton = () => {
+  document.location.href = "https://naver.com";
+};
 
 const AuthKakaoLoginButton = () => {
   return (
