@@ -6,9 +6,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <title>zipbora</title>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
