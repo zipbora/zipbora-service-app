@@ -10,7 +10,7 @@ import { throttle } from "lodash";
 
 const FilterMenu: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-
+  const [selectedChip, setSelectedChip] = useState("");
   const chipWrapperRef = useRef<any>(null);
   const chipScrollStartRef = useRef<any>(null);
   const chipScrollEndRef = useRef<any>(null);
@@ -57,6 +57,7 @@ const FilterMenu: React.FC = () => {
       position: relative;
       display: flex;
       flex-direction: column;
+      background: white;
     `,
     filterWrapper: css`
       position: relative;
@@ -69,16 +70,20 @@ const FilterMenu: React.FC = () => {
     chip: css`
       height: 1.75rem;
       color: #555555;
-      border: 1px solid #cccccc;
+      background: #ededed;
+      border: 1px solid #ededed;
       border-radius: 6px;
       margin-right: 0.25rem;
       margin-bottom: 0.25rem;
       font-size: 0.75rem;
       font-weight: 600;
+      &.MuiChip-clickable:hover {
+        background-color: #6d6af4;
+      }
       &:hover {
         border: 1px solid #6d6af4;
-        color: #6d6af4;
-        background-color: transparent;
+        color: #ffffff;
+        background: #6d6af4;
       }
     `,
     chipTotalWrapper: (props: DrawerTypeProps) => css`
@@ -142,6 +147,16 @@ const FilterMenu: React.FC = () => {
         display: none;
       `}
     `,
+    subFilterWrapper: css`
+      background: #ededed;
+      color: #333333;
+    `,
+  };
+
+  const getSubFilter = {
+    // info: <Info  />,
+    // warning: <Warning />,
+    // error: <Error />,
   };
 
   return (
@@ -155,49 +170,49 @@ const FilterMenu: React.FC = () => {
             ref={chipWrapperRef}
           >
             <Chip
-              label="매매"
+              label="거래유형"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="유형"
+              label="가격"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="평형"
+              label="건물형태"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="Clickable"
+              label="면적"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="Clickable"
+              label="관리비"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="세대수"
+              label="층수"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="입주년차"
+              label="방개수"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
             />
             <Chip
-              label="용적률"
+              label="추가옵션"
               css={styles.chip}
               variant="outlined"
               onClick={handleClick}
@@ -213,6 +228,7 @@ const FilterMenu: React.FC = () => {
           )}
         </div>
       </div>
+      {/* <div css={styles.subFilterWrapper}>{getSubFilter[selectedChip]}</div> */}
       {isExpanded && (
         <div
           css={css`

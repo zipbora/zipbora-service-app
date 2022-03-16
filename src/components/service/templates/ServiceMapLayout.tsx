@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 import { debounce } from "lodash";
 import Script from "next/script";
 
@@ -12,7 +12,7 @@ const ServiceMapLayout: React.FC = () => {
 
   const [zoom, setZoom] = useState<number>(0);
 
-  const mapStyle = {
+  const mapStyle: CSSProperties = {
     width: "100%",
     height: "calc(100%)",
     position: "absolute",

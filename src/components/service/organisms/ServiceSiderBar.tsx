@@ -55,6 +55,7 @@ const SiderBar: React.FC<Props> = ({ onClose, visible }) => {
         onClick={toggleDrawer(true)}
         css={css`
           width: 2rem;
+          color: black;
         `}
       />
       <SwipeableDrawer
@@ -63,6 +64,7 @@ const SiderBar: React.FC<Props> = ({ onClose, visible }) => {
         onClose={toggleDrawer(false)}
         onOpen={toggleDrawer(true)}
         css={styles.drawer}
+        hideBackdrop
       >
         <div style={{ display: "flex", margin: "1rem" }}>
           <CloseIcon css={styles.closeIcon} onClick={toggleDrawer(false)} />

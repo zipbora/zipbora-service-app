@@ -9,6 +9,7 @@ import { css } from "@emotion/react";
 import { MainLogo } from "../../../assets/Icons";
 import SiderBar from "./ServiceSiderBar";
 import FilterMenu from "../molcules/FilterMenu";
+import ZipboraMainLogo from "../../../assets/zipbora_main_logo.svg";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",
@@ -23,10 +24,11 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 const ServiceMainGNB: React.FC = () => {
   const styles = {
     appbarStyle: css`
-      background-color: #6d6af4;
+      background-color: #ffffff;
       height: 3.25rem;
       .MuiToolbar-gutters {
         min-height: 3.25rem;
+        border-bottom: 1px solid rgba(109, 106, 244, 0.2);
       }
     `,
   };
@@ -40,22 +42,14 @@ const ServiceMainGNB: React.FC = () => {
             padding: 0;
           `}
         >
-          <Typography
-            variant="h6"
-            component="div"
-            css={css`
-              flex-grow: 1;
-              text-align: center;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: absolute;
-              width: 100%;
-              font-weight: 700;
-            `}
-          >
-            집보라
-          </Typography>
+          <div>
+            <ZipboraMainLogo
+              width="7rem"
+              height="2.5rem"
+              viewBox="150 -80 300 300"
+            />
+          </div>
+
           <div
             css={css`
               position: absolute;
@@ -67,6 +61,7 @@ const ServiceMainGNB: React.FC = () => {
             <SearchIcon
               css={css`
                 width: 2rem;
+                color: black;
               `}
             />
             <SiderBar />

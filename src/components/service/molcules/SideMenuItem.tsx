@@ -56,6 +56,7 @@ const SideMenuItem: React.FC = () => {
     <div>
       {menuList.map(menu => (
         <div
+          key={menu.name}
           css={css`
             height: 2.5rem;
             display: flex;
