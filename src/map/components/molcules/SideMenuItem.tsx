@@ -1,11 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import ChatIcon from "../../../assets/chat.svg";
-import HeartIcon from "../../../assets/heart.svg";
-import FileIcon from "../../../assets/file.svg";
-import PinIcon from "../../../assets/pin.svg";
-import PersonIcon from "../../../assets/boy.svg";
-import SettingIcon from "../../../assets/setting.svg";
+import ChatIcon from "../../assets/chat.svg";
+import HeartIcon from "../../assets/heart.svg";
+import FileIcon from "../../assets/file.svg";
+import PinIcon from "../../assets/pin.svg";
+import PersonIcon from "../../assets/boy.svg";
+import SettingIcon from "../../assets/setting.svg";
 
 const SideMenuItem: React.FC = () => {
   const styles = {};

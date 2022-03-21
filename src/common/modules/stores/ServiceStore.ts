@@ -1,5 +1,5 @@
 import { action, computed, makeObservable, observable } from "mobx";
-import ServiceRepository from "src/stores/repositories/ServiceRepository";
+import ServiceRepository from "../repositories/ServiceRepository";
 
 class ServiceStore {
   private rootStore: { serviceStore: ServiceStore };

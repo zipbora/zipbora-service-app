@@ -1,4 +1,4 @@
-import ServiceLayout from "@components/service/templates/ServiceLayout";
+import ServiceLayout from "@map/components/templates/ServiceLayout";
 import { NextPage } from "next";
 import Head from "next/head";
 
