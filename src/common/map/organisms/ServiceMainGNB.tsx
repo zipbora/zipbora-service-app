@@ -6,10 +6,10 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import { css } from "@emotion/react";
-import { MainLogo } from "../../../assets/Icons";
+import { MainLogo } from "../../assets/Icons";
 import SiderBar from "./ServiceSiderBar";
 import FilterMenu from "../molcules/FilterMenu";
-import ZipboraMainLogo from "../../../assets/zipbora_main_logo.svg";
+import ZipboraMainLogo from "../../assets/zipbora_main_logo.svg";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",

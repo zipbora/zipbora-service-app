@@ -1,9 +1,9 @@
 // import { NextPage, NextPageContext } from "next";
 import type { AppProps } from "next/app";
 import { Global } from "@emotion/react";
-import GlobalCommonStyle from "@components/GlobalCommonStyle";
-import useMobileDetect from "@hooks/useMobileDetect";
-import { StoresProvider } from "@stores";
+import GlobalCommonStyle from "@common/GlobalCommonStyle";
+import useMobileDetect from "@common/hooks/useMobileDetect";
+import { StoresProvider } from "@common/modules/stores";
 import CssBaseline from "@mui/material/CssBaseline";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {

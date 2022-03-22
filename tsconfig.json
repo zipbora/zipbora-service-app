@@ -23,13 +23,10 @@
     "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
-      "@templates/*": ["src/templates/*"],
-      "@components/*":["src/components/*"],
-      "@hooks/*":["src/hooks/*"],
       "@pages/*":["pages/*"],
-      "@stores/*":["src/stores/*"],
-      "@stores":["src/stores"],
-      "@repositories/*":["src/stores/repositories/*"],
+      "@common/*":["src/common/*"],
+      "@auth/*":["src/auth/*"],
+      "@map/*":["src/map/*"],
     }
   },
   "include": [

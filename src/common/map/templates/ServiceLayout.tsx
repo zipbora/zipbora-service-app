@@ -1,6 +1,9 @@
+<<<<<<< HEAD:src/common/map/templates/ServiceLayout.tsx
 import ServiceMainGNB from "@components/map/organisms/ServiceMainGNB";
+=======
+import ServiceMainGNB from "@map/components/organisms/ServiceMainGNB";
+>>>>>>> 0a9e405d6dad1677c9ab49872b0de787b1a03a05:src/map/components/templates/ServiceLayout.tsx
 import { observer } from "mobx-react";
-import { useStores } from "@stores/index";
 import { useEffect, useRef, useState } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Box from "@mui/material/Box";
@@ -23,11 +26,6 @@ const Puller = styled(Box)(({}) => ({
 const ServiceLayout: React.FC = observer(({ children }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
 
-  // const { serviceStore } = useStores();
-
-  // const handleTestStore: React.EventHandler = async e => {
-  //   serviceStore.increase();
-  // };
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
