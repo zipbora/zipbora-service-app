@@ -1,4 +1,4 @@
-import ServiceMainGNB from "@components/service/organisms/ServiceMainGNB";
+import ServiceMainGNB from "@components/map/organisms/ServiceMainGNB";
 import { observer } from "mobx-react";
 import { useStores } from "@stores/index";
 import { useEffect, useRef, useState } from "react";

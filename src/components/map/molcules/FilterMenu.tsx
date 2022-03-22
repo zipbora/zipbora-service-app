@@ -7,6 +7,7 @@ import { css } from "@emotion/react";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { throttle } from "lodash";
+import SubFilterMenu from "./SubFilterMenu";
 
 const FilterMenu: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -228,7 +229,7 @@ const FilterMenu: React.FC = () => {
           )}
         </div>
       </div>
-      {/* <div css={styles.subFilterWrapper}>{getSubFilter[selectedChip]}</div> */}
+      <SubFilterMenu type={selectedChip} />
       {isExpanded && (
         <div
           css={css`
