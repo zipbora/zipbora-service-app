@@ -1,4 +1,4 @@
-import ServiceMainGNB from "@map/components/organisms/ServiceMainGNB";
+import ServiceMainGNB from "@map/components/GNB/ServiceMainGNB";
 import { observer } from "mobx-react";
 import { useEffect, useRef, useState } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";

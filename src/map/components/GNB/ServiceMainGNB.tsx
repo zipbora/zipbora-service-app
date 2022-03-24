@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 import SearchIcon from "@mui/icons-material/Search";
 import { css } from "@emotion/react";
 import { MainLogo } from "../../assets/Icons";
-import SiderBar from "./ServiceSiderBar";
-import FilterMenu from "../molcules/FilterMenu";
+import SiderBar from "../organisms/ServiceSiderBar";
+import FilterMenu from "../FilterMenu/FilterMenu";
 import ZipboraMainLogo from "../../assets/zipbora_main_logo.svg";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
