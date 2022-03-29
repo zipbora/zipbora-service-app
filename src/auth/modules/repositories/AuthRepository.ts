@@ -2,7 +2,7 @@ import axios from "axios";
 
 // request functionality only for method. no mapping, no business
 // use qs in making and parsing query string
-const ServiceRepository = {
+const AuthRepository = {
   async createSomething() {
     try {
       const res = await axios.get(
@@ -15,4 +15,4 @@ const ServiceRepository = {
   },
 };
 
-export default ServiceRepository;
+export default AuthRepository;

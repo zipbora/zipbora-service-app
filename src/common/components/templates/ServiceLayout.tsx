@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/common/map/templates/ServiceLayout.tsx
 import ServiceMainGNB from "@components/map/organisms/ServiceMainGNB";
-=======
-import ServiceMainGNB from "@map/components/organisms/ServiceMainGNB";
->>>>>>> 0a9e405d6dad1677c9ab49872b0de787b1a03a05:src/map/components/templates/ServiceLayout.tsx
 import { observer } from "mobx-react";
 import { useEffect, useRef, useState } from "react";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";

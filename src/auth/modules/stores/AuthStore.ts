@@ -1,11 +1,11 @@
 import { action, computed, makeObservable, observable } from "mobx";
-import ServiceRepository from "../repositories/ServiceRepository";
+import AuthRepository from "../repositories/AuthRepository";
 
-class ServiceStore {
-  private rootStore: { serviceStore: ServiceStore };
+class AuthStore {
+  private rootStore: { authStore: AuthStore };
   number = 0;
 
-  constructor(rootStore: { serviceStore: ServiceStore }) {
+  constructor(rootStore: { authStore: AuthStore }) {
     this.rootStore = rootStore;
     makeObservable(this, {
       number: observable, // 4버전의 @observable와 동일합니다.
@@ -28,4 +28,4 @@ class ServiceStore {
   };
 }
 
-export default ServiceStore;
+export default AuthStore;
