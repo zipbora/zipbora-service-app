@@ -4,7 +4,7 @@
 import { css } from "@emotion/react";
 import { Slider } from "@mui/material";
 import { useState } from "react";
-import styles from "./styled";
+import * as S from "./styled";
 
 type Props = {};
 const PriceFilter: React.FC<Props> = () => {
@@ -33,19 +33,18 @@ const PriceFilter: React.FC<Props> = () => {
     setSalePrice(newValue);
   };
   return (
-    <div css={styles.wrapper}>
-      <span css={styles.title}>보증금/전세금</span>
-      <Slider
+    <div css={S.styles.wrapper}>
+      <span css={S.styles.title}>보증금/전세금</span>
+      <S.StyledSlider
         getAriaLabel={() => "Price range"}
         min={0}
         max={200}
         onChange={handleChangeDeposit}
         value={deposit}
         marks={depositMarks}
-        css={styles.slider}
       />
-      <span css={styles.title}>월세</span>
-      <Slider
+      <span css={S.styles.title}>월세</span>
+      <S.StyledSlider
         getAriaLabel={() => "Price range"}
         step={10}
         min={0}
@@ -53,17 +52,15 @@ const PriceFilter: React.FC<Props> = () => {
         onChange={handleChangeMonthlyRent}
         value={monthlyRent}
         marks={depositMarks}
-        css={styles.slider}
       />
-      <span css={styles.title}>매매가</span>
-      <Slider
+      <span css={S.styles.title}>매매가</span>
+      <S.StyledSlider
         getAriaLabel={() => "Price range"}
         min={0}
         max={200}
         onChange={handleChangeSalePrice}
         value={salePrice}
         marks={depositMarks}
-        css={styles.slider}
       />
     </div>
   );

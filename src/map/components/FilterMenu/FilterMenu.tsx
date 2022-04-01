@@ -6,6 +6,7 @@ import Chip from "@mui/material/Chip";
 import { css } from "@emotion/react";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ReplayIcon from "@mui/icons-material/Replay";
 import { throttle } from "lodash";
 import SubFilterMenu from "./SubFilterMenu/SubFilterMenu";
 import styles from "./styled";
@@ -151,6 +152,14 @@ const FilterMenu: React.FC = () => {
               margin-left: 16px;
             `}
           >
+            <ReplayIcon
+              css={css`
+                width: 16px;
+                vertical-align: middle;
+                margin-right: 6px;
+                transform: rotateX(180deg) rotate(90deg);
+              `}
+            />
             초기화
           </div>
           <div
