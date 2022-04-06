@@ -6,18 +6,21 @@ import useMobileDetect from "@common/hooks/useMobileDetect";
 import { MapStoresProvider } from "@map/modules/stores";
 import { AuthStoresProvider } from "@auth/modules/stores";
 import CssBaseline from "@mui/material/CssBaseline";
+import { CookiesProvider } from "react-cookie";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const currentDevice = useMobileDetect();
   return (
     <>
-      <AuthStoresProvider>
-        <MapStoresProvider>
-          <CssBaseline />
-          <Global styles={GlobalCommonStyle} />
-          <Component {...pageProps} />
-        </MapStoresProvider>
-      </AuthStoresProvider>
+      <CookiesProvider>
+        <AuthStoresProvider>
+          <MapStoresProvider>
+            <CssBaseline />
+            <Global styles={GlobalCommonStyle} />
+            <Component {...pageProps} />
+          </MapStoresProvider>
+        </AuthStoresProvider>
+      </CookiesProvider>
     </>
   );
 };
