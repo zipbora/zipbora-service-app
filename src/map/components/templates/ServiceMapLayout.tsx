@@ -21,28 +21,54 @@ const ServiceMapLayout: React.FC = () => {
   };
 
   const initMap = () => {
+    // create map
+    const map = new naver.maps.Map("map", {
+      zoom: 15,
+    });
+
     // set center of the map
-    let locPosition;
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
         const lat = position.coords.latitude;
         const lon = position.coords.longitude;
-
-        locPosition = new naver.maps.LatLng(lat, lon);
+        const locPosition = new naver.maps.LatLng(lat, lon);
+        map.setCenter(locPosition);
       });
     } else {
-      locPosition = new naver.maps.LatLng(37.5677463677699, 126.9153946742084);
+      const locPosition = new naver.maps.LatLng(37.3433319, 127.1100525);
+      map.setCenter(locPosition);
     }
 
-    // create map
-    const map = new naver.maps.Map("map", {
-      center: locPosition,
-      zoom: 15,
-    });
-
-    const marker = new naver.maps.Marker({
+    const markerOption = {
       position: new naver.maps.LatLng(37.3595704, 127.105399),
       map,
+    };
+
+    const marker = new naver.maps.Marker(markerOption);
+
+    const locationBtnHtml =
+      '<a href="#" class="btn_mylct"><span class="spr_trff spr_ico_mylct">내 위치</span></a>';
+    naver.maps.Event.once(map, "init", function () {
+      const customControl = new naver.maps.CustomControl(locationBtnHtml, {
+        position: naver.maps.Position.LEFT_CENTER,
+      });
+      customControl.setMap(map);
+
+      naver.maps.Event.addDOMListener(
+        customControl.getElement(),
+        "click",
+        function () {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+
+              const curLocation = new naver.maps.LatLng(lat, lon);
+              map.setCenter(curLocation);
+            });
+          }
+        },
+      );
     });
 
     // set bounds_changed listener

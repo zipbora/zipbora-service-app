@@ -9,12 +9,16 @@ type DrawerTypeProps = {
 export const StyledSlider = styled(Slider)`
   color: #6D6AF4;
   height: 4px;
+  padding: 8px 0;
   .MuiSlider-track {
     border: none;
   };
   .MuiSlider-markLabel {
     font-size: 12px;
-  }
+  };
+  .MuiSlider-markLabel:nth-child(1) {
+    color: red;
+  };
   .MuiSlider-mark {
     display: none;
   };
@@ -22,14 +26,14 @@ export const StyledSlider = styled(Slider)`
     height: 16px;
     width: 16px;
     background-color: #6D6AF4;
-    border: 2px solid currentColor,
+    border: 1px solid #fff;
     :focus, :hover, .Mui-active, .Mui-focusVisible: {
       box-shadow: inherit;
     };
     :before: {
       display: none;
     };
-  };
+  }; 
   .MuiSlider-valueLabel {
     lineHeight: 1.2px;
     font-size: 10px;
@@ -49,6 +53,10 @@ export const StyledSlider = styled(Slider)`
       transform: rotate(45deg);
     },
   },
+`;
+
+export const SliderWrapper = styled("div")`
+  margin-bottom: 15px;
 `;
 
 export const styles = {
